@@ -1,0 +1,6 @@
+.idea/
+CCDR_detection/main_results/
+CCDR_detection/feat_stas/old_SnP_detection/
+CCDR_detection/old_SnP/
+scenic/
+classifier/logs/

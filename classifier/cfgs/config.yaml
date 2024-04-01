@@ -1,0 +1,17 @@
+# general
+log_freq: 20 
+eval_freq: 5
+epochs: 200
+batch_size: 512
+num_workers: 16
+save_path: logs/classifier
+auto_resume: True
+
+# solver
+base_lr: 0.0001
+
+# data
+train_path: /comp/data/extracted_features/train_list.pkl
+val_path: /comp/data/extracted_features/val_list.pkl
+
+arch: fc_Classifier
