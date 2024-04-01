@@ -84,3 +84,15 @@ python trainingset_search_detection_vehicle.py --target 'region100' \
 
 To use the classifier to score selected candidates, see `classifier/README.md` for details.
 
+# Reproducing LB results
+The trained weights can be downloaded from([LB weights for trained model](https://drive.google.com/file/d/1VkZjCrkSQ4qRE03XaOFR907NQaGPgGMk/view?usp=sharing)
+To perform inference
+```
+python tools/test.py DataCV2024-main/task_model/mmdetection/workdirs/retinanet_r50_fpn_1x_custom_tss_car.py DataCV2024-main/task_model/mmdetection/workdirs/epoch_12.pth --eval bbox
+
+```
+To produce our leaderboard submission for the competition:
+```
+python tools/test.py  DataCV2024-main/task_model/configs_tss/retinanet/retinanet_r50_fpn_1x_custom_tss_car.py DataCV2024-main/task_model/mmdetection/workdirs/epoch_12.pth  --format-only --options "jsonfile_prefix=./"
+```
+
